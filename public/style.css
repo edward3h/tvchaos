@@ -1,0 +1,35 @@
+.item, .pagination {
+	position: relative;
+}
+span.right, .pagination .next {
+	right: 0;
+	position: absolute;
+}
+.item:nth-child(even) {
+	background-color: #CCC;
+}
+.listouter {
+	max-width: 800px;
+}
+.item .description {
+	display: none;
+	position: absolute;
+	border: solid blue 2px;
+	z-index: 3;
+	top: 100%;
+	background-color: #EEF;
+	width: 80%;
+	margin-left:10%;
+}
+.item:hover .description {
+	display: block;
+}
+.item:hover {
+	background-color: #EEF;
+}
+.ADDED.item, .DOWNLOAD_WAIT.item, .DOWNLOAD.item {
+	background-color: #FFFFCC;
+}
+.SEED.item {
+	background-color: #CCFFCC;
+}
