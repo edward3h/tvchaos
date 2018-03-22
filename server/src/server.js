@@ -1,8 +1,9 @@
+require('dotenv').config();
 import express from 'express';
 import webpack from 'webpack';
 import morgan from 'morgan';
 
-const port = 5555;
+const port = process.env.SERVER_PORT || 5555;
 const app = express();
 
 app.use(express.static('public'));
@@ -14,7 +15,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
 	    publicPath: wpconfig.output.publicPath
 }));
 
-app.use(morgan('dev'));
+app.use(morgan('combined'));
 
 app.listen(port, err => {
 	if(err) {
