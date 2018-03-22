@@ -1,8 +1,9 @@
+require('dotenv').config()
 import Transmission from 'transmission';
 
 const transmission = new Transmission({
-	port: 9091,
-	host: 'ravenor.local'
+	port: process.env.TRANSMISSION_PORT || 9091,
+	host: process.env.TRANSMISSION_HOST
 });
 
 function add(url, callback) {
