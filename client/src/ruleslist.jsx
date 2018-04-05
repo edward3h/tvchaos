@@ -6,7 +6,7 @@ const TIMEOUT = 3000;
 
 function ListItem(props) {
 	return (
-		<tr>
+		<tr className="item">
 		<td>{props.name}</td>
 		<td>{props.pattern}</td>
 		<td>{props.action}</td>
