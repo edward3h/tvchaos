@@ -11,6 +11,20 @@ db.query("select min(rawfeed_id) as feed_id, title, series, episode, parseddate 
   }
 });
 
+function fulltitle(row) {
+  let title = row.title;
+  if (row.series) {
+    title += ` S${row.series}`;
+  }
+  if (row.episode) {
+    title += ` E${row.episode}`;
+  }
+  if (row.parseddate) {
+    title += ` ${row.parseddate}`;
+  }
+  return title;
+}
+
 function applyrules(feed_rows) {
   let inflight = 0;
   let added = [];
@@ -24,7 +38,7 @@ function applyrules(feed_rows) {
           console.log(row.title.padEnd(maxwidth), " ===> ", status);
         }
         if (status == 'ADDED') {
-          added.push(row.title);
+          added.push(fulltitle(row));
         }
         inflight -= 1;
         if (inflight <= 0) {
