@@ -11,6 +11,9 @@ span.right, .pagination .next {
 .listouter {
 	max-width: 800px;
 }
+.listouter table {
+	width: 100%;
+}
 .item .description {
 	display: none;
 	position: absolute;
@@ -32,4 +35,8 @@ span.right, .pagination .next {
 }
 .SEED.item {
 	background-color: #CCFFCC;
+}
+a.active {
+	text-decoration: none;
+	cursor: default;
 }
