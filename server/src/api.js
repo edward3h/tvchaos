@@ -7,5 +7,7 @@ import rawfeed from './rawfeed';
 router.use('/rawfeed', rawfeed);
 import download_api from './download_api';
 router.use('/download', download_api);
+import rules from './rules';
+router.use('/rules', rules);
 
 export default router;
