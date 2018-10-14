@@ -3,6 +3,7 @@ import update from 'immutability-helper';
 
 const PAGE_SIZE = 20;
 const TIMEOUT = 3000;
+const SEARCH_TIMEOUT = 500;
 
 function ListItem(props) {
 	let button = null;
@@ -33,8 +34,12 @@ export default class TitleList extends React.Component {
 		super(props);
 		this.state = {
 			items: [],
-			offset: 0
+			offset: 0,
+			search: ''
 		};
+
+		this.handleSearchChange = this.handleSearchChange.bind(this);
+		this.doFeedFetch = this.doFeedFetch.bind(this);
 	}
 
 	componentDidMount() {
@@ -43,14 +48,21 @@ export default class TitleList extends React.Component {
 
 	doFeedFetch(offset = this.state.offset) {
 		clearTimeout(this.timer);
-		const qs = offset > 0 ? `?offset=${offset}` : "";
-		fetch(`/api/rawfeed${qs}`)
+		const query = new URLSearchParams();
+		if (offset > 0) {
+			query.append('offset', offset);
+		}
+		if (this.state.search) {
+			query.append('search', this.state.search);
+		}
+		const qs = query.toString();
+		fetch(`/api/rawfeed?${qs}`)
 	        .then(results => {
 	                return results.json();
 	        }).then(data => {
 	                this.setState({items: data, offset: offset});
 									if (data.find(x => x.status)) {
-										this.timer = setTimeout(doFeedFetch, TIMEOUT);
+										this.timer = setTimeout(this.doFeedFetch, TIMEOUT);
 									}
 	        });
 	}
@@ -77,7 +89,7 @@ export default class TitleList extends React.Component {
 				return {};
 			});
 		}).catch(error => console.error(error));
-		this.timer = setTimeout(doFeedFetch, TIMEOUT);
+		this.timer = setTimeout(this.doFeedFetch, TIMEOUT);
 	}
 
 	handleHideClick(id) {
@@ -86,6 +98,13 @@ export default class TitleList extends React.Component {
 		.then(response => {
 			this.doFeedFetch();
 		});
+	}
+
+	handleSearchChange(event) {
+		event.preventDefault();
+		this.setState({search: event.target.value});
+		clearTimeout(this.timer);
+		this.timer = setTimeout(this.doFeedFetch, SEARCH_TIMEOUT);
 	}
 
 	render() {
@@ -104,6 +123,9 @@ export default class TitleList extends React.Component {
 			{this.state.offset > 0 &&
 				<button className="previous" onClick={() => this.doFeedFetch(this.state.offset - PAGE_SIZE)}>⬅️ Previous</button>
 			}
+			<div className="search"><span>Search</span>
+			<input type="text" value={this.state.search} onChange={this.handleSearchChange} />
+			</div>
 			{this.state.items.length == PAGE_SIZE && 
 				<button className="next" onClick={() => this.doFeedFetch(this.state.offset + PAGE_SIZE)}>Next ➡️</button>
 			}
