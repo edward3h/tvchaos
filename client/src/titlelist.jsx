@@ -102,7 +102,7 @@ export default class TitleList extends React.Component {
 
 	handleSearchChange(event) {
 		event.preventDefault();
-		this.setState({search: event.target.value});
+		this.setState({search: event.target.value, offset: 0});
 		clearTimeout(this.timer);
 		this.timer = setTimeout(this.doFeedFetch, SEARCH_TIMEOUT);
 	}
