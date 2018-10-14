@@ -1,7 +1,16 @@
-.item, .pagination {
+.item {
 	position: relative;
 }
-span.right, .pagination .next {
+.pagination {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+.pagination .search {
+	flex-grow: 1;
+}
+span.right {
 	right: 0;
 	position: absolute;
 }
@@ -40,3 +49,4 @@ a.active {
 	text-decoration: none;
 	cursor: default;
 }
+
