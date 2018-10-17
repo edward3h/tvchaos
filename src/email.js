@@ -2,6 +2,10 @@
 require('dotenv').config();
 import nodemailer from 'nodemailer';
 
+if (!(process.env.MAIL_USER || process.env.MAIL_PW)) {
+  throw new Error('Expected environment MAIL_USER and MAIL_PW');
+}
+
 const transporter = nodemailer.createTransport({
   host: 'homie.mail.dreamhost.com',
   port: 587,

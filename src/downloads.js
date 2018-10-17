@@ -2,6 +2,10 @@
 require('dotenv').config();
 import Transmission from 'transmission';
 
+if (!process.env.TRANSMISSION_HOST) {
+  throw new Error('Expected environment TRANSMISSION_HOST');
+}
+
 const transmission = new Transmission({
   port: process.env.TRANSMISSION_PORT || 9091,
   host: process.env.TRANSMISSION_HOST
