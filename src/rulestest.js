@@ -1,9 +1,10 @@
+/* eslint-disable no-console */
 import db from './db';
 import rules from './rules';
 
-db.query("select min(rawfeed_id) as feed_id, title, series, episode, parseddate from parsedfeed group by 2,3,4,5", (err, feed_rows, feed_fields) => {
+db.query('select min(rawfeed_id) as feed_id, title, series, episode, parseddate from parsedfeed group by 2,3,4,5', (err, feed_rows) => {
   if (err) {
-    console.error("Error:", err);
+    console.error('Error:', err);
   } else {
     applyrules(feed_rows);
   }
