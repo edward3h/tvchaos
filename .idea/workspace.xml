@@ -2,7 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="059d982a-dd45-4544-97b8-dbea942d00aa" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/test/run_test_db.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/ruleslist.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ruleslist.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/titlelist.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/titlelist.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/download_api.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/download_api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/downloads.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/downloads.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/rawfeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/rawfeed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/rules.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/rules.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apostest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apostest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/download_status.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/download_status.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/downloads.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/downloads.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/email.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/email.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feedimport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feedimport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feedtest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/feedtest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsetitles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsetitles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsetitles2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsetitles2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsetitlescron.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsetitlescron.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsetitlesdb.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsetitlesdb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rules.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/rules.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rulesdownload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/rulesdownload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rulestest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/rulestest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/start_download.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/start_download.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testemail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/testemail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.dev.js" afterDir="false" />
+>>>>>>> 38c38e86c919f8dc5f2687adc313f63dfdb9ff87
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,7 +56,11 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="titlelist.jsx" pinned="false" current-in-tab="false">
+=======
+      <file leaf-file-name="titlelist.jsx" pinned="false" current-in-tab="true">
+>>>>>>> 38c38e86c919f8dc5f2687adc313f63dfdb9ff87
         <entry file="file://$PROJECT_DIR$/client/src/titlelist.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="325">
@@ -38,6 +73,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="cronsteps.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cronsteps.sh">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,6 +104,8 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> 38c38e86c919f8dc5f2687adc313f63dfdb9ff87
       <file leaf-file-name="ruleslist.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/ruleslist.jsx">
           <provider selected="true" editor-type-id="text-editor">
@@ -211,11 +249,14 @@
             <path>
               <item name="tvchaos" type="b2602c69:ProjectViewProjectNode" />
               <item name="tvchaos" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tvchaos" type="b2602c69:ProjectViewProjectNode" />
               <item name="tvchaos" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> 38c38e86c919f8dc5f2687adc313f63dfdb9ff87
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -332,7 +373,11 @@
       <option name="presentableId" value="Default" />
       <updated>1539609999224</updated>
       <workItem from="1539610003113" duration="1138000" />
+<<<<<<< HEAD
       <workItem from="1539779151329" duration="3621000" />
+=======
+      <workItem from="1539779151329" duration="3147000" />
+>>>>>>> 38c38e86c919f8dc5f2687adc313f63dfdb9ff87
     </task>
     <task id="LOCAL-00001" summary="improve cron error logging">
       <created>1539779727373</created>
@@ -345,11 +390,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="4759000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
+=======
+    <option name="totallyTimeSpent" value="4285000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+>>>>>>> 38c38e86c919f8dc5f2687adc313f63dfdb9ff87
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -434,6 +486,16 @@
     <entry file="file://$PROJECT_DIR$/rulescron.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/cronsteps.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 38c38e86c919f8dc5f2687adc313f63dfdb9ff87
     <entry file="file://$PROJECT_DIR$/test/run_test_db.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -459,6 +521,19 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/start_download.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="121" selection-start-line="29" selection-start-column="121" selection-end-line="29" selection-end-column="121" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 38c38e86c919f8dc5f2687adc313f63dfdb9ff87
     <entry file="file://$PROJECT_DIR$/src/rulestest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -673,6 +748,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/cronsteps.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -697,6 +773,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 38c38e86c919f8dc5f2687adc313f63dfdb9ff87
   </component>
   <component name="masterDetails">
     <states>
