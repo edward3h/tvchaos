@@ -34,8 +34,11 @@ function applyrules(feed_rows) {
     if (matches && matches.length > 0) {
       inflight += 1;
       start_download(row.feed_id, (err, status) => {
+        if (err) {
+          console.error("rulesdownload error ", err);
+        }
         if (status != 'SEED') {
-          console.log(row.title.padEnd(maxwidth), " ===> ", status);
+          console.log("rulesdownload existing status ", row.feed_id, " ", row.title.padEnd(maxwidth), " ===> ", status);
         }
         if (status == 'ADDED') {
           added.push(fulltitle(row));

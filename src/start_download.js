@@ -4,8 +4,10 @@ import downloads from './downloads';
 // callback(err, status)
 export default function start_download(feed_id, callback) {
   db.query("select f.id, f.linkurl, d.transmission_id from rawfeed f left outer join downloads d on f.id = d.feed_id where f.id = ?", [feed_id], (err, selectResult) => {
-		if (err || selectResult.length > 1) {
+		if (err) {
       callback(err, "ERROR");
+    } else if (selectResult.length > 1) {
+			callback("found more than one entry for feed_id " + feed_id, "ERROR");
 		} else if (selectResult.length < 1) {
 			callback("NOT FOUND","NOT FOUND");
 		} else {
