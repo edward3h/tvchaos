@@ -1,11 +1,12 @@
+/* eslint-disable no-console */
 import db from './db';
 import rules from './rules';
 import start_download from './start_download';
 import sendmail from './email';
 
-db.query("select min(rawfeed_id) as feed_id, title, series, episode, parseddate from parsedfeed group by 2,3,4,5 order by 1 desc", (err, feed_rows, feed_fields) => {
+db.query('select min(rawfeed_id) as feed_id, title, series, episode, parseddate from parsedfeed group by 2,3,4,5 order by 1 desc', (err, feed_rows) => {
   if (err) {
-    console.error("Error:", err);
+    console.error('Error:', err);
   } else {
     applyrules(feed_rows);
   }
@@ -35,12 +36,12 @@ function applyrules(feed_rows) {
       inflight += 1;
       start_download(row.feed_id, (err, status) => {
         if (err) {
-          console.error("rulesdownload error ", err);
+          console.error('rulesdownload error ', err);
         }
-        if (status != 'SEED') {
-          console.log("rulesdownload existing status ", row.feed_id, " ", row.title.padEnd(maxwidth), " ===> ", status);
+        if (status !== 'SEED') {
+          console.log('rulesdownload existing status ', row.feed_id, ' ', row.title.padEnd(maxwidth), ' ===> ', status);
         }
-        if (status == 'ADDED') {
+        if (status === 'ADDED') {
           added.push(fulltitle(row));
         }
         inflight -= 1;
@@ -48,10 +49,10 @@ function applyrules(feed_rows) {
           db.end();
           if (added.length > 0) {
             let title = `TVCHAOS started ${added.length} new downloads`;
-            if(added.length == 1) {
+            if(added.length === 1) {
               title = `TVCHAOS started download of ${added[0]}`;
             }
-            sendmail('edwardandcheryl@ethelred.org', title, `Started download of:\n${added.join("\n")}`);
+            sendmail('edwardandcheryl@ethelred.org', title, `Started download of:\n${added.join('\n')}`);
           }
         }
       });
