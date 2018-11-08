@@ -13,7 +13,7 @@ db.query('select name, pattern, action from rules where pattern_type = \'regexp\
 
 export default function matches(title, action = null) {
   return rules.flatMap(rule => {
-    if(new RegExp(rule.pattern).test(title) && (!action || action === rule.action)) {
+    if(new RegExp(rule.pattern, 'i').test(title) && (!action || action === rule.action)) {
       return [{rule: rule.name, action: rule.action}];
     }
     return [];
