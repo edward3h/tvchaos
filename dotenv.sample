@@ -1,0 +1,16 @@
+# copy this sample file to .env, fill in values as appropriate for your setup
+# alternatively you can supply the same environment variables by some other method
+
+MYSQL_PW=12345
+MYSQL_USER=foobar
+MYSQL_DB=foobar
+MYSQL_HOST=foobar.example.com
+
+FEED_URL=https://tvchaosuk.com/rss/your.feed.id
+
+MAIL_HOST=smtp.example.com
+MAIL_USER=admin@example.com
+MAIL_PW=12345
+MAIL_FROM=admin+tvchaos@example.com
+
+TRANSMISSION_HOST=127.0.0.1

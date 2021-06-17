@@ -1,0 +1,5 @@
+[client]
+password=12345
+user=foobar
+database=foobar
+host=foobar.example.com

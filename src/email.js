@@ -7,7 +7,7 @@ if (!(process.env.MAIL_USER || process.env.MAIL_PW)) {
 }
 
 const transporter = nodemailer.createTransport({
-  host: 'homie.mail.dreamhost.com',
+  host: process.env.MAIL_HOST,
   port: 587,
   secure: false,
   requireTLS: true,
@@ -22,7 +22,7 @@ const transporter = nodemailer.createTransport({
 
 export default function sendmail(to, subject, body) {
   transporter.sendMail({
-    from: 'jaq+tvchaos@ethelred.org',
+    from: process.env.MAIL_FROM,
     to: to,
     subject: subject,
     text: body
