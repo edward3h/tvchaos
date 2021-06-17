@@ -21,9 +21,7 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "request": "^2.88.0",
-    "transmission": "^0.4.9"
-  },
-  "devDependencies": {
+    "transmission": "^0.4.9",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
