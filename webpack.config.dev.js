@@ -7,7 +7,7 @@ export default {
     output: {
         filename: 'client.js',
         path: path.resolve(__dirname, 'public'),
-        publicPath: '/'
+        publicPath: 'auto'
     },
     module: {
 	      rules: [
