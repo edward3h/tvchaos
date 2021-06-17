@@ -28,3 +28,4 @@ app.listen(port, err => {
 });
 
 app.use('/api', api);
+app.use((req, res) => res.sendFile('public/index.html'));
