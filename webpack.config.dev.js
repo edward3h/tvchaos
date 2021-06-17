@@ -1,13 +1,15 @@
 import webpack from 'webpack';
 import path from 'path';
 
+const ASSET_PATH = process.env.ASSET_PATH || '/';
+
 export default {
     devtool: 'inline-source-map',
     entry: './client/src/app.jsx',
     output: {
         filename: 'client.js',
         path: path.resolve(__dirname, 'public'),
-        publicPath: 'auto'
+        publicPath: ASSET_PATH
     },
     module: {
 	      rules: [
