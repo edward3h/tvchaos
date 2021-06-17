@@ -9,7 +9,7 @@ import api from './api';
 const port = process.env.SERVER_PORT || 5555;
 const app = express();
 
-app.use(express.static('public'));
+app.use(wpconfig.output.publicPath, express.static('public'));
 
 const compiler = webpack(wpconfig);
 app.use(require('webpack-dev-middleware')(compiler, {
@@ -28,4 +28,3 @@ app.listen(port, err => {
 });
 
 app.use('/api', api);
-app.use((req, res) => res.sendFile('public/index.html'));
