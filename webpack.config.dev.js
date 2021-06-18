@@ -31,5 +31,10 @@ export default {
     // import MyComponent from './my-component.jsx';
     resolve: {
         extensions: ['.js', '.jsx'],
-    }
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            BASENAME: JSON.stringify(ASSET_PATH)
+        })
+    ]
 };
