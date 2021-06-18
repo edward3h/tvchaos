@@ -67,7 +67,7 @@ export default class TitleList extends React.Component {
       query.append('search', this.state.search);
     }
     const qs = query.toString();
-    fetch(`/api/rawfeed?${qs}`)
+    fetch(`${BASENAME}/api/rawfeed?${qs}`)
       .then(results => {
         return results.json();
       }).then(data => {
@@ -80,7 +80,7 @@ export default class TitleList extends React.Component {
 
   handleDownloadClick(id) {
     console.log('attempt to download ', id);
-    fetch(`/api/download/${id}`, {method: 'POST'})
+    fetch(`${BASENAME}/api/download/${id}`, {method: 'POST'})
       .then(response => {
         if (response.ok) {
           return response.json();
@@ -105,7 +105,7 @@ export default class TitleList extends React.Component {
 
   handleHideClick(id) {
     console.log('attempt to hide', id);
-    fetch(`/api/rawfeed/hide/${id}`, {method: 'POST'})
+    fetch(`${BASENAME}/api/rawfeed/hide/${id}`, {method: 'POST'})
       .then(() => {
         this.doFeedFetch();
       });

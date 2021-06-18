@@ -34,7 +34,7 @@ export default class RulesList extends React.Component {
 
   doRulesFetch(offset = this.state.offset) {
     const qs = offset > 0 ? `?offset=${offset}` : '';
-    fetch(`/api/rules${qs}`)
+    fetch(`${BASENAME}/api/rules${qs}`)
       .then(results => {
         return results.json();
       }).then(data => {
