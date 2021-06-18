@@ -5,7 +5,7 @@ import RulesList from './ruleslist';
 import {BrowserRouter as Router, NavLink, Route} from 'react-router-dom';
 
 const App = () => (
-  <Router basename=BASENAME>
+  <Router basename={BASENAME}>
     <div>
       <div className="links"><NavLink to="/" activeClassName="active" exact>Raw Feed</NavLink> | <NavLink to="/rules" activeClassName="active">Rules</NavLink></div>
       <div className="body">
