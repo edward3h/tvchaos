@@ -27,4 +27,4 @@ app.listen(port, err => {
   }
 });
 
-app.use('/api', api);
+app.use(wpconfig.output.publicPath + '/api', api);
